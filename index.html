@@ -40,19 +40,19 @@
           <button
             class="btn btn-active btn-success mr-[20px] rounded-4xl bg-[#41ff6b1a] border-none"
           >
-            <span class="text-base font-black text-black">0</span
+            <span id="red-love" class="text-base font-black text-black">0</span
             ><img class="h-[30px] w-[30px]" src="assets/heart.png" alt="" />
           </button>
           <!-- coin button -->
           <button
             class="btn btn-active btn-success mr-[20px] rounded-4xl bg-[#41ff6b1a] border-none"
           >
-            <span class="text-base font-black text-black">100</span
+            <span id="coin" class="text-base font-black text-black">100</span
             ><img class="h-[30px] w-[30px]" src="assets/coin.png" alt="" />
           </button>
           <!-- copy button -->
           <button class="btn btn-active btn-success rounded-4xl text-white">
-            <span>2</span> Copy
+            <span id="copy-count">0</span> Copy
           </button>
         </div>
       </section>
@@ -76,10 +76,10 @@
     <!-- hero hero -->
     <!-- hero hero -->
     <main
-      class="bg-[#f5fff6] px-[60px] mt-[48px] flex items-center justify-center"
+      class="bg-[#f5fff6] px-[60px] my-[48px] flex items-center justify-center"
     >
       <!-- box container section -->
-      <section class="grid grid-cols-4 gap-4">
+      <section class="grid grid-cols-4 gap-1">
         <!-- one -->
         <div class="p-[32px] bg-white rounded-[12px] shadow-md">
           <div class="flex items-center justify-between">
@@ -93,12 +93,10 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
-            <h1 class="text-md mt-[16px] font-bold">
-              National Emergency Number
-            </h1>
+            <h1 class="text-md mt-[16px] font-bold">National Emergency</h1>
             <p class="text-base mt-[2px]">National Emergency</p>
             <h1 class="text-xl mt-[24px] font-bold">999</h1>
             <button class="bg-[#f2f2f2] rounded-2xl px-[16px] py-[6px]">
@@ -107,11 +105,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-one"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -127,7 +126,7 @@
               <img class="w-[32px] h-[32px]" src="assets/police.png" alt="" />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">Police Helpline Number</h1>
@@ -139,11 +138,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-two"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -163,7 +163,7 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">Fire Service Number</h1>
@@ -175,11 +175,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-three"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -187,7 +188,7 @@
           </div>
         </div>
         <!-- sms container section -->
-        <div class="p-[16px] row-span-3">
+        <div id="sms-notifiction" class="p-[16px] row-span-3 shadow-md">
           <div class="flex items-center justify-between">
             <div class="flex items-center">
               <i class="fa-solid fa-clock"></i>
@@ -199,19 +200,9 @@
               Clear
             </button>
           </div>
-
           <!-- sms notifiction -->
-          <div class="py-[16px] flex items-center justify-between gap-1">
-            <div>
-              <h1 class="text-[#111111] font-semibold text-sm">
-                Fire Service Number
-              </h1>
-              <p class="text-[#5c5c5c] text-sm">999</p>
-            </div>
-            <div class="text-sm">
-              <p>11:36:58 AM</p>
-            </div>
-          </div>
+          <!-- sms notifiction -->
+          <!-- sms notifiction -->
         </div>
         <!-- four -->
         <div class="p-[32px] bg-white rounded-[12px] shadow-md">
@@ -226,7 +217,7 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">Ambulance Service</h1>
@@ -238,11 +229,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-four"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -262,7 +254,7 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">Women & Child Helpline</h1>
@@ -274,11 +266,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-five"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -298,10 +291,10 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
-            <h1 class="text-md mt-[16px] font-bold">Women & Child Helpline</h1>
+            <h1 class="text-md mt-[16px] font-bold">Anti-Corruption</h1>
             <p class="text-base mt-[2px]">Anti-Corruption Helpline</p>
             <h1 class="text-xl mt-[24px] font-bold">106</h1>
             <button class="bg-[#f2f2f2] rounded-2xl px-[16px] py-[6px]">
@@ -310,11 +303,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-six"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -334,7 +328,7 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">Electricity Helpline</h1>
@@ -346,11 +340,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-seven"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
@@ -370,7 +365,7 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">Brac Helpline</h1>
@@ -382,12 +377,13 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
-              class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
+              id="call-eight"
+              class="btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
@@ -406,7 +402,7 @@
               />
             </div>
             <!-- love -->
-            <i class="fa-regular fa-heart love"></i>
+            <button class="heart"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div>
             <h1 class="text-md mt-[16px] font-bold">
@@ -420,11 +416,12 @@
           </div>
           <div class="flex items-center justify-between mt-[24px]">
             <button
-              class="btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
+              class="copy btn btn-wide text-[#5c5c5c] border-1 border-[#5c5c5c] w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-clone"></i> Copy
             </button>
             <button
+              id="call-nine"
               class="btn btn-success bg-[#00a63e] text-white w-[48%] h-[40px] rounded-[8px]"
             >
               <i class="fa-solid fa-phone"></i>Call
