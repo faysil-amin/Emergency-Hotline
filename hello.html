@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multiple Cards Copy Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+      .card {
+        width: 200px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+      .btn {
+        margin-top: 10px;
+        padding: 6px 10px;
+        border: none;
+        background: #2563eb;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <p class="copyText">First card text</p>
+      <button class="btn copyBtn">Copy</button>
+    </div>
+
+    <div class="card">
+      <p class="copyText">Second card text</p>
+      <button class="btn copyBtn">Copy</button>
+    </div>
+
+    <div class="card">
+      <p class="copyText">Third card text</p>
+      <button class="btn copyBtn">Copy</button>
+    </div>
+
+    <script>
+      // সবগুলো বাটন সিলেক্ট করা
+      const buttons = document.querySelectorAll(".copyBtn");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // বাটনের parent card থেকে text খুঁজে আনা
+          const card = button.closest(".card");
+          const text = card.querySelector(".copyText").innerText;
+
+          // কপি করা
+          navigator.clipboard.writeText(text).then(() => {
+            alert("Copied: " + text);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

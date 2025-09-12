@@ -1,8 +1,11 @@
 const smsContainer = document.getElementById("sms-notifiction");
 const heart = document.querySelectorAll(".heart");
 const redLove = document.getElementById("red-love");
-const copy = document.getElementsByClassName("copy");
-const copyCount = document.getElementById("copy-count");
+
+let idx = 0;
+let i = 0;
+// challenge part of this assignment
+
 // coin parseInt
 function coinNumber(id) {
   let idSelect = document.getElementById(id).innerText;
@@ -11,7 +14,6 @@ function coinNumber(id) {
 }
 
 // heart count encrice
-let i = 0;
 for (const idx of heart) {
   idx.addEventListener("click", () => {
     i++;
@@ -319,12 +321,3 @@ document.getElementById("call-nine").addEventListener("click", () => {
     return;
   }
 });
-
-// challenge part of this assignment
-let id = 0;
-for (const idx of copy) {
-  idx.addEventListener("click", () => {
-    id++;
-    copyCount.innerText = id;
-  });
-}
